@@ -1,0 +1,14 @@
+version: '2'
+
+services:
+  gitbucket:
+    build: gitbucket
+    restart: always
+    ports:
+      - 80:8080
+      - 29418:29418
+    volumes:
+      - data:/gitbucket
+
+volumes:
+  data:
